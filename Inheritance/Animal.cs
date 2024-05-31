@@ -10,7 +10,7 @@ namespace Inheritance
 	{
 		// Animal propertys
 		public abstract string Name { get; protected set; }
-		public abstract string Weight { get; protected set; }
+		public abstract double Weight { get; protected set; }
 		public abstract int Age { get; protected set; }
 		public abstract int CutnessLevel { get; protected set; }
 

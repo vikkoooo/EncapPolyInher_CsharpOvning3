@@ -9,12 +9,12 @@ namespace Inheritance
 	internal class Bird : Animal
 	{
 		public override string Name { get; protected set; }
-		public override string Weight { get; protected set; }
+		public override double Weight { get; protected set; }
 		public override int Age { get; protected set; }
 		public override int CutnessLevel { get; protected set; }
 		public double WingSpan { get; protected set; }
 
-		public Bird(string name, string weight, int age, int cutenessLevel, double wingSpan)
+		public Bird(string name, double weight, int age, int cutenessLevel, double wingSpan)
 		{
 			Name = name;
 			Weight = weight;

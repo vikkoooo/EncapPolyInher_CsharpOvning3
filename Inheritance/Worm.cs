@@ -9,12 +9,12 @@ namespace Inheritance
 	internal class Worm : Animal
 	{
 		public override string Name { get; protected set; }
-		public override string Weight { get; protected set; }
+		public override double Weight { get; protected set; }
 		public override int Age { get; protected set; }
 		public override int CutnessLevel { get; protected set; }
 		public bool IsPoisonous { get; protected set; }
 
-		public Worm(string name, string weight, int age, int cutenessLevel, bool isPoisonous)
+		public Worm(string name, double weight, int age, int cutenessLevel, bool isPoisonous)
 		{
 			Name = name;
 			Weight = weight;
