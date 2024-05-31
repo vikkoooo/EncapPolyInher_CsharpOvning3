@@ -10,23 +10,22 @@ namespace Encapsulation
 	{
 		// Fields
 		private int age;
-		private string fName;
-		private string lName;
+		private string fName = String.Empty; // Constructor unhappy otherwise
+		private string lName = String.Empty; // Constructor unhappy otherwise
 		private double height;
 		private double weight;
 
 		// Constructors
-		// todo think about the constructors one more time, is this the way to go?
 		public Person(string fName, string lName)
 		{
-			FName = fName;
-			LName = lName;
+			FName = fName ?? throw new ArgumentNullException(nameof(fName)); // Supress warning safe way (but constructor still unhappy)
+			LName = lName!; // Supress warning unsafe way (but constructor still unhappy)
 		}
 
+		// Call constructor above, note ": this" instead of ": base"
 		public Person(int age, string fName, string lName, double height, double weight)
+			: this(fName, lName)
 		{
-			FName = fName;
-			LName = lName;
 			Age = age;
 			Height = height;
 			Weight = weight;

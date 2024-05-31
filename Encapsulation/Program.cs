@@ -17,7 +17,6 @@ namespace Encapsulation
 				// Create dummy person			
 				Person viktor = handler.CreatePerson(34, "Viktor", "Lundberg", 177.5, 68.5);
 
-
 				// Test props
 				Console.WriteLine(viktor);
 				handler.SetAge(viktor, 35);
