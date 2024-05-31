@@ -1,4 +1,5 @@
-﻿using static Inheritance.Horse;
+﻿using System;
+using static Inheritance.Horse;
 
 namespace Inheritance
 {
@@ -33,6 +34,17 @@ namespace Inheritance
 			Console.WriteLine($"{swan.Name} the {swan.GetType().Name} says: {swan.DoSound()} and lives at {swan.Location}");
 
 			Console.WriteLine($"{wolfman.Name} the {wolfman.GetType().Name} sounds {wolfman.DoSound()} and then says {wolfman.Talk()}");
+
+			/*
+			Q: If we during development come to the conclusion that all birds need a new attribute, in which class should we put it?
+			A: I believe we should put the new attribute in Bird.cs, hence all the underlying Birds will have to implement it.
+			*/
+
+			/*
+			Q: If all animals need the new attribute, where should we put it then?
+			A: If all animals need a new attribute we should put it in Animal.cs because all animals will have to implement it.
+			*/
+
 		}
 	}
 }
