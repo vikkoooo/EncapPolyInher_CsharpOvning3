@@ -16,7 +16,7 @@ namespace Inheritance
 		public BloodType Type { get; protected set; }
 
 
-		public Horse(string name, double weight, int age, int cutenessLevel, int speed, BloodType type)
+		public Horse(string name, double weight, int age, int cutenessLevel, BloodType type)
 		{
 			Name = name;
 			Weight = weight;
