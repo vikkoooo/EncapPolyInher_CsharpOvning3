@@ -32,5 +32,14 @@ namespace Inheritance
 		{
 			return $"{base.Stats()}, Breed: {Breed}";
 		}
+
+		public string GetMood()
+		{
+			// Define possible moods
+			string[] moods = { "sleepy", "playful", "cozy", "scared", "proud", "hungry" };
+			Random rand = new Random(); // import random instance
+
+			return moods[rand.Next(0, moods.Length)];
+		}
 	}
 }

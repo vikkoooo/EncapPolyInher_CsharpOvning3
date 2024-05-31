@@ -35,6 +35,62 @@ namespace Inheritance
 				}
 				Console.WriteLine();
 			}
+
+			/*
+			// Create list of Dogs
+			List<Dog> dogs = new List<Dog>();
+			dogs.Add(new Horse("Golden Hornline", 500, 5, 7, BloodType.Warm)); // Compiler error
+
+			Q: Try to add a horse to the list of dogs. Why does not it work?
+			A: Because a Horse is a class of Horse, and the list can only contain Dogs or its siblings, it's what we declared in <>.
+
+			Q: What type must the list be for all classes to be stored together?
+			A: If all types of animals should be able to be in the same list, the list should be of type Animal or even more generic like 
+			   Object (not a good solution tho!).
+
+			Q: Print all Animals Stats() through a foreach loop. Explain what is happening.
+			A: The most unique Stats() method is looked for, therefore all the Birds will print their Wingspan since we define that in Bird.cs
+			   And when we use Stats() on ex. Flamingo we will add one more layer to it, in this case FeatherColor.
+			*/
+
+			// Print Stats() only for Dogs
+			foreach (var animal in animals)
+			{
+				if (animal is Dog dog)
+				{
+					Console.WriteLine(dog.Stats());
+				}
+			}
+			Console.WriteLine();
+
+			/*
+			 // Try to access GetMood() from Dog
+
+			foreach (var animal in animals)
+			{
+				if (animal is Dog dog)
+				{
+					Console.WriteLine(dog.Stats());
+					Console.WriteLine($"{dog.Name} is {dog.GetMood()} right now");
+				}
+			}
+
+			 Q: Access not possible - why?
+			 A: Well actually it is possible, I guess the trick here was to show that we need to cast it to dog?
+			    We will not get access if we just do: 
+			    if (animal is Dog) 
+			    and then try to access the element through animal.GetMood();
+			*/
+
+			// Accessing Dogs current mood
+			foreach (var animal in animals)
+			{
+				if (animal is Dog dog)
+				{
+					Console.WriteLine(dog.Stats());
+					Console.WriteLine($"{dog.Name} is {dog.GetMood()} right now");
+				}
+			}
 		}
 	}
 }
