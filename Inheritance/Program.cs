@@ -18,6 +18,8 @@ namespace Inheritance
 			Flamingo flamingo = new Flamingo("Yo Yo Flamingo", 5, 4, 9, 150, "Pink");
 			Swan swan = new Swan("Whiteiy", 8, 2, 8, 180, "Norr Mälarstrand");
 
+			Wolfman wolfman = new Wolfman("Bela", 85.5, 18, 1, true);
+
 			// Sounds
 			Console.WriteLine($"{horse.Name} the {horse.GetType().Name} says: {horse.DoSound()}");
 			Console.WriteLine($"{dog.Name} the {dog.GetType().Name} says: {dog.DoSound()}");
@@ -29,6 +31,8 @@ namespace Inheritance
 			Console.WriteLine($"{pelican.Name} the {pelican.GetType().Name} says: {pelican.DoSound()} with a mouth size of {pelican.MouthSize} cubic");
 			Console.WriteLine($"{flamingo.Name} the {flamingo.GetType().Name} says: {flamingo.DoSound()} with feather color {flamingo.FeatherColor}");
 			Console.WriteLine($"{swan.Name} the {swan.GetType().Name} says: {swan.DoSound()} and lives at {swan.Location}");
+
+			Console.WriteLine($"{wolfman.Name} the {wolfman.GetType().Name} sounds {wolfman.DoSound()} and then says {wolfman.Talk()}");
 		}
 	}
 }
