@@ -29,5 +29,10 @@ namespace Inheritance
 		{
 			return "neigh";
 		}
+
+		public override string Stats()
+		{
+			return $"{base.Stats()}, BloodType: {Type}";
+		}
 	}
 }

@@ -15,5 +15,9 @@ namespace Inheritance
 		{
 			MouthSize = mouthSize;
 		}
+		public override string Stats()
+		{
+			return $"{base.Stats()}, MouthSize: {MouthSize}";
+		}
 	}
 }

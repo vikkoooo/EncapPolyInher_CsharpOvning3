@@ -27,5 +27,10 @@ namespace Inheritance
 		{
 			return "chick-a-dee-dee-dee";
 		}
+
+		public override string Stats()
+		{
+			return $"{base.Stats()}, WingSpan: {WingSpan}";
+		}
 	}
 }

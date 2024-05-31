@@ -27,5 +27,10 @@ namespace Inheritance
 		{
 			return "hedgehogging";
 		}
+
+		public override string Stats()
+		{
+			return $"{base.Stats()}, NrOfSpikes: {NrOfSpikes}";
+		}
 	}
 }

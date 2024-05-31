@@ -15,5 +15,9 @@ namespace Inheritance
 		{
 			Location = location;
 		}
+		public override string Stats()
+		{
+			return $"{base.Stats()}, Location: {Location}";
+		}
 	}
 }

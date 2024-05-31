@@ -15,5 +15,9 @@ namespace Inheritance
 		{
 			return "Fear me I am the Wolfman!!";
 		}
+		public override string Stats()
+		{
+			return $"{base.Stats()}";
+		}
 	}
 }

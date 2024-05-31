@@ -27,5 +27,10 @@ namespace Inheritance
 		{
 			return "woff";
 		}
+
+		public override string Stats()
+		{
+			return $"{base.Stats()}, Breed: {Breed}";
+		}
 	}
 }

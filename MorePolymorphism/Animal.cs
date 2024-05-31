@@ -19,5 +19,10 @@ namespace Inheritance
 
 		// Animal Functions
 		public abstract string DoSound();
+
+		public virtual string Stats()
+		{
+			return $"Name: {Name}, Weight: {Weight}, Age: {Age}, Cuteness Level: {CutnessLevel}";
+		}
 	}
 }

@@ -27,5 +27,9 @@ namespace Inheritance
 		{
 			return "awoo";
 		}
+		public override string Stats()
+		{
+			return $"{base.Stats()}, PackLeader: {PackLeader}";
+		}
 	}
 }

@@ -27,5 +27,9 @@ namespace Inheritance
 		{
 			return "exists";
 		}
+		public override string Stats()
+		{
+			return $"{base.Stats()}, IsPoisonous: {IsPoisonous}";
+		}
 	}
 }

@@ -15,5 +15,10 @@ namespace Inheritance
 		{
 			FeatherColor = featherColor;
 		}
+
+		public override string Stats()
+		{
+			return $"{base.Stats()}, FeatherColor: {FeatherColor}";
+		}
 	}
 }
