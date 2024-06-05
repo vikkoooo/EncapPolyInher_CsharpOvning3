@@ -1,5 +1,5 @@
 ﻿using System;
-using static Inheritance.Horse;
+using static MorePolymorphism.Horse;
 
 namespace MorePolymorphism
 {
