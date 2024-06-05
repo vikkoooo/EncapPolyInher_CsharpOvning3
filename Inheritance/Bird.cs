@@ -8,18 +8,11 @@ namespace Inheritance
 {
 	internal class Bird : Animal
 	{
-		public override string Name { get; protected set; }
-		public override double Weight { get; protected set; }
-		public override int Age { get; protected set; }
-		public override int CutnessLevel { get; protected set; }
 		public double WingSpan { get; protected set; }
 
 		public Bird(string name, double weight, int age, int cutenessLevel, double wingSpan)
+			: base(name, weight, age, cutenessLevel)
 		{
-			Name = name;
-			Weight = weight;
-			Age = age;
-			CutnessLevel = cutenessLevel;
 			WingSpan = wingSpan;
 		}
 
