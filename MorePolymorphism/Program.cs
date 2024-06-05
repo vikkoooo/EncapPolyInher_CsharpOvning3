@@ -1,7 +1,7 @@
 ﻿using System;
 using static Inheritance.Horse;
 
-namespace Inheritance
+namespace MorePolymorphism
 {
 	internal class Program
 	{
