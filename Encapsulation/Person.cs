@@ -10,16 +10,16 @@ namespace Encapsulation
 	{
 		// Fields
 		private int age;
-		private string fName = String.Empty; // Constructor unhappy otherwise
-		private string lName = String.Empty; // Constructor unhappy otherwise
+		private string? fName; // note ? to make sure field is nullable
+		private string? lName; // note ? to make sure field is nullable
 		private double height;
 		private double weight;
 
 		// Constructors
 		public Person(string fName, string lName)
 		{
-			FName = fName ?? throw new ArgumentNullException(nameof(fName)); // Supress warning safe way (but constructor still unhappy)
-			LName = lName!; // Supress warning unsafe way (but constructor still unhappy)
+			FName = fName ?? throw new ArgumentNullException(nameof(fName)); // Supress warning safe way
+			LName = lName ?? throw new ArgumentNullException(nameof(lName)); // Supress warning safe way
 		}
 
 		// Call constructor above, note ": this" instead of ": base"
@@ -53,7 +53,11 @@ namespace Encapsulation
 			get { return fName; }
 			set
 			{
-				if (string.IsNullOrWhiteSpace(value) || value.Length < 2 || value.Length > 10)
+				if (string.IsNullOrWhiteSpace(value))
+				{
+					throw new ArgumentNullException("Firstname can not be empty or null");
+				}
+				else if (value.Length < 2 || value.Length > 10)
 				{
 					throw new ArgumentException("First name can not be less than two characters long or more than ten characters long");
 				}
@@ -69,7 +73,11 @@ namespace Encapsulation
 			get { return lName; }
 			set
 			{
-				if (string.IsNullOrWhiteSpace(value) || value.Length < 3 || value.Length > 15)
+				if (string.IsNullOrWhiteSpace(value))
+				{
+					throw new ArgumentNullException("Lastname can not be empty or null");
+				}
+				else if (value.Length < 3 || value.Length > 15)
 				{
 					throw new ArgumentException("Last name can not be less than three characters long or more than fifteen characters long");
 				}
